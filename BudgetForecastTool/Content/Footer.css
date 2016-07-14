@@ -1,0 +1,161 @@
+﻿/** Dark Orange **/
+/** Mid Orange **/
+/** Light Orange **/
+/** Light Gray */
+/*# sourceMappingURL=Footer.css.map */
+/** Middle Gray*/
+/** Dark Gray **/
+/** Mid Gray **/
+/** Light Gray **/
+/** Blue **/
+/** Red **/
+/** Green **/
+/** White */
+.font-normal {
+  font-family: GothamBook, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+@media print {
+  .font-normal {
+    font-family: Arial, sans-serif;
+  }
+}
+.font-bold {
+  font-family: GothamBold, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+@media print {
+  .font-bold {
+    font-family: Arial, sans-serif;
+  }
+}
+.font-light {
+  font-family: GothamLight, Arial, sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 1;
+}
+@media print {
+  .font-light {
+    font-family: Arial, sans-serif;
+  }
+}
+.outer-footer-wrapper {
+  background: #dad9d9;
+  margin: 0;
+  padding: 0;
+  font-family: GothamBook, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-size: 12px;
+  font-size: 1.2rem;
+  display: table-row !important;
+  vertical-align: bottom;
+  height: 1px;
+}
+@media print {
+  .outer-footer-wrapper {
+    font-family: Arial, sans-serif;
+  }
+}
+.footer-menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+  background: #eeeeee;
+}
+.footer-menu ul {
+  width: 650px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.footer-menu ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-menu ul li a,
+.footer-menu ul li a:hover,
+.footer-menu ul li a:focus {
+  display: table-cell;
+  margin: 0;
+  padding: 0 35px;
+  height: 50px;
+  vertical-align: middle;
+  color: #595858;
+  text-decoration: none;
+  outline: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+.footer-submenu {
+  display: none;
+  width: 650px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+.footer-submenu .about-submenu,
+.footer-submenu .legal-submenu {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0 0 264px;
+  vertical-align: top;
+}
+.footer-submenu .about-submenu ul,
+.footer-submenu .legal-submenu ul {
+  display: block;
+  margin: 0;
+  padding: 5px 0 30px 0;
+}
+.footer-submenu .about-submenu ul li,
+.footer-submenu .legal-submenu ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.footer-submenu .about-submenu ul li a,
+.footer-submenu .legal-submenu ul li a,
+.footer-submenu .about-submenu ul li a:hover,
+.footer-submenu .legal-submenu ul li a:hover,
+.footer-submenu .about-submenu ul li a:focus,
+.footer-submenu .legal-submenu ul li a:focus,
+.footer-submenu .about-submenu ul li a.sfSel,
+.footer-submenu .legal-submenu ul li a.sfSel {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 2px 0;
+  color: #595858;
+  font-weight: normal;
+  text-decoration: none;
+  outline: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #dad9d9;
+}
+.footer-submenu .about-submenu ul li a:hover,
+.footer-submenu .legal-submenu ul li a:hover,
+.footer-submenu .about-submenu ul li a:focus,
+.footer-submenu .legal-submenu ul li a:focus {
+  color: #de5626;
+  border-bottom: 1px solid #de5626;
+}
+.footer-submenu .legal-submenu {
+  padding-left: 0;
+  width: 253px;
+}
+/*# sourceMappingURL=Footer.css.map */

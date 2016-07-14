@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Forecast | @ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+        .applytr {
+            background-color: #C0C0C0;
+        }
+
+        div[ng-app] {
+            margin: 10px;
+        }
+
+        .table {
+            width: 100%;
+        }
+
+        form[editable-form] > div {
+            margin: 10px 0;
+        }
+
+        #veil {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            cursor: not-allowed;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+            background: #000000;
+        }
+
+        #feedLoading {
+            position: absolute;
+            top: 200px;
+            width: 100%;
+            text-align: center;
+            font-size: 4em;
+            color: white;
+            text-shadow: 2px 2px 2px #021124;
+        }
+    </style>
+
+    <!-- Optional theme -->
+    @*<script src="~/Scripts/require.js"></script>
+        <script src="~/App_JS/ng-app/config.js"></script>*@
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="outer-header-wrapper">
+            <header class="external-header site-header navbar-fixed-top row hidden-print">
+                <div class="header-wrapper container clearfix" id="header_accordion">
+                    <div class="site-logo visible-xs pull-left" style="text-align:center">
+                        <a href="#" target="_self" style="padding:20px"><span style="text-align:center;vertical-align:middle;font-size:14px;font-weight:bold;font-style: italic">Budget Forecast</span></a>
+                    </div>
+                    <div class="site-logo hidden-xs pull-left" style="text-align:center">
+                        <a href="#" target="_self" style="padding:20px" ><span style="text-align:center;vertical-align:middle;font-size:14px;font-weight:bold;font-style: italic">Budget Forecast</span></a>
+                    </div>
+                    <div>
+                        <div class="head-up-links">
+                            <div class="headlinks">
+                                <div class="btn-group">
+                                    <div class="btn-group">
+                                        <button type="button" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span id="HeaderButtons_lblUserFullName">@User.Identity.Name</span><span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li>
+                                                <a href="javascript:window.close();" id="">Sign Out</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="page-content" style="min-height:620px;padding-bottom:20px">
+            <div class="container body-content">
+                @RenderBody()
+            </div>
+        </div>
+        <div class="outer-footer-wrapper clearfix">
+            <footer class="external-footer site-footer clearfix">
+                <div class="footer-menu clearfix">
+                    <center><p style="margin-top: 10px;">&copy; @DateTime.Now.Year - Societe General Golbal Solution.</p></center>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/angular")
+@Scripts.Render("~/bundles/xedit")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/home")
+</html>

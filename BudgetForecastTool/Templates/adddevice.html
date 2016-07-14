@@ -1,0 +1,153 @@
+﻿<div style="padding:10px" ng-controller="Ctrl">
+
+    <div class="row"><h3 style="text-align:center">Device WINDtab Management Application</h3></div>
+    <div id="message"></div>
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist" id="myTabs">
+            <li role="presentation" ><a href="#home" aria-controls="home" role="tab" ng-click="LoadDevices()" data-toggle="tab">View/Edit Forecast Details</a></li>
+            <li role="presentation" class="active"><a href="#adddevice" aria-controls="adddevice" role="tab" data-toggle="tab">Add Forecast</a></li>
+            <li role="presentation"><a href="#revHis" aria-controls="revHis" ng-click="LoadHistory()" role="tab" data-toggle="tab">Revision History</a></li>
+
+        </ul>
+
+        <!-- Tab panes -->
+        <div class=" tab-content" style="padding:10px;border-left: 1px solid #D0D0D0;border-right: 1px solid #D0D0D0;border-bottom: 1px solid #D0D0D0;">
+            
+            <div role="tabpanel" class="tab-pane active" id="adddevice">
+                <div class="table-responsive" style="margin-top:35px;width:100%">
+                    <!-- <span> <a href="#">View All</a>  <span> Filter : <input type="text" class="editable-input" /> </span></span>-->
+
+                    <table class="table table-hover table-condensed" style="border-collapse:collapse;border-spacing:0px;background-color:transparent">
+                        <tr class="thead" style="font-weight: bold;background-color:#c7c1a9;border-bottom:1px solid #9a9064border-top:1px solid #e5ebeb;border-left:1px solid #e5ebeb;border-right:1px solid #e5ebeb">
+                            <td style="width:10%">Add</td>
+                            <td style="width:15%">Project Name</td>
+                            <td style="width:15%">Resource Name</td>
+                            <td style="width:5%">Jan</td>
+                            <td style="width:5%">Feb</td>
+                            <td style="width:5%">Mar</td>
+                            <td style="width:5%">Apr</td>
+                            <td style="width:5%">May</td>
+                            <td style="width:5%">Jun</td>
+                            <td style="width:5%">Jul</td>
+                            <td style="width:5%">Aug</td>
+                            <td style="width:5%">Oct</td>
+                            <td style="width:5%">Nov</td>
+                            <td style="width:5%">Dec</td>
+
+
+                        </tr>
+                        <tr ng-repeat="user in usersAdd" style="border-bottom:1px solid #e5ebeb;border-top:1px solid #e5ebeb;border-left:1px solid #e5ebeb;border-right:1px solid #e5ebeb">
+                            <td style="white-space: nowrap">
+                                <!-- form -->
+                                <form editable-form name="rowform1" onbeforesave="AddNewDevices($data)" ng-show="rowform1.$visible" class="form-buttons form-inline" shown="inserted == user">
+                                    <!--<a ng-disabled="rowform1.$waiting">
+                                      <img src="images/save.png" style="height:20px;width:20px" />
+                                    </a>-->
+                                    <button type="submit" ng-disabled="rowform1.$waiting" class="btn btn-primary">
+                                        save
+                                    </button>
+                                    <a ng-disabled="rowform1.$waiting" ng-click="cancelAdvice(rowform, $index)">
+                                        <img src="images/Delete-icon.png" style="height:20px;width:20px" />
+                                    </a>
+                                </form>
+                                <div class="buttons" ng-show="!rowform1.$visible">
+                                    <a ng-click="copyUser( user.tabId)">
+                                        <img src="images/button-add_red.png" style="height:30px;width:30px" />
+                                    </a>
+
+                                    <a ng-click="removeUserAdd($index)"><img src="images/delete.png" style="height:20px;width:20px" /></a>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- editable username (text with validation) -->
+                                <span editable-text="user.imeiStartRange" e-name="imeiStartRange" e-form="rowform1">
+                                    {{ user.imeiStartRange  }}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.sku" e-name="sku" e-form="rowform1">
+                                    {{ user.sku }}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.creditRating" e-name="creditRating" e-form="rowform1">
+                                    {{ user.creditRating  }}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.ratePlanGroup" e-name="ratePlanGroup" e-form="rowform1">
+                                    {{ user.ratePlanGroup}}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.deviceName" click-stop e-name="deviceName" e-form="rowform1">
+                                    {{ user.deviceName  }}
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.ratePlanTabLimit1" e-name="ratePlanTabLimit1" e-form="rowform1" onbeforesave="ratePlan($data,$index)" e-required>
+                                    {{ user.ratePlanTabLimit1 }}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.ratePlanTabLimit2" e-name="ratePlanTabLimit2" e-form="rowform1" onbeforesave="ratePlan($data)" e-required>
+                                    {{ user.ratePlanTabLimit2 }}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.ratePlanTabLimit3" e-name="ratePlanTabLimit3" e-form="rowform1" onbeforesave="ratePlan($data)" e-required>
+                                    {{ user.ratePlanTabLimit3 }}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.ratePlanTabLimit4" e-name="ratePlanTabLimit4" e-form="rowform1" onbeforesave="ratePlan($data)" e-required>
+                                    {{ user.ratePlanTabLimit4}}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.ratePlanTabLimit5" e-name="ratePlanTabLimit5" e-form="rowform1" onbeforesave="ratePlan($data)" e-required>
+                                    {{ user.ratePlanTabLimit5}}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.ratePlanTabLimit6" e-name="ratePlanTabLimit6" e-form="rowform1" onbeforesave="ratePlan($data)" e-required>
+                                    {{ user.ratePlanTabLimit6 }}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                                <span editable-text="user.ratePlanTabLimit6" e-name="ratePlanTabLimit6" e-form="rowform1" onbeforesave="ratePlan($data)" e-required>
+                                    {{ user.ratePlanTabLimit6 }}
+                                </span>
+                            </td>
+
+                        </tr>
+                    </table>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">  <button class="btn btn-default" ng-click="addUser()">Add New Device</button></div>
+                    <div class="col-sm-3"><button class="btn btn-default" ng-click="saveAll()">Save & View Changes</button></div>
+                    <div class="col-sm-3"><button class="btn btn-default">Export to CSV</button></div>
+                    <div class="col-sm-3"><button class="btn btn-default">Notify IT of the Changes</button></div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</div>

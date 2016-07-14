@@ -1,0 +1,104 @@
+﻿@import "imports.less";
+
+.outer-footer-wrapper {
+    background: @footerGrey;
+    margin: 0;
+    padding: 0;
+    .font-normal;
+    font-size: 12px;
+    font-size: 1.2rem;
+    display: table-row !important;
+    vertical-align: bottom;
+    height: 1px;
+}
+
+.footer-menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    background: @lightGray;
+
+    ul {
+        width: 650px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            a, a:hover, a:focus {
+                display: table-cell;
+                margin: 0;
+                padding: 0 35px;
+                height: 50px;
+                vertical-align: middle;
+                color: @fontColor;
+                text-decoration: none;
+                outline: 0;
+                background: none;
+                box-shadow: none;
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.footer-submenu {
+    display: none;
+    width: 650px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+
+    .about-submenu, .legal-submenu {
+        display: inline-block;
+        margin: 0;
+        padding: 0 0 0 264px;
+        vertical-align: top;
+
+        ul {
+            display: block;
+            margin: 0;
+            padding: 5px 0 30px 0;
+
+            li {
+                display: block;
+                margin: 0;
+                padding: 0;
+
+                a, a:hover, a:focus, a.sfSel {
+                    display: inline-block;
+                    margin: 5px 0;
+                    padding: 2px 0;
+                    color: @fontColor;
+                    font-weight: normal;
+                    text-decoration: none;
+                    outline: 0;
+                    background: none;
+                    box-shadow: none;
+                    border: none;
+                    border-radius: 0;
+                    border-bottom: 1px solid @footerGrey;
+                }
+
+                a:hover, a:focus {
+                    color: @darkOrange;
+                    border-bottom: 1px solid @darkOrange;
+                }
+            }
+        }
+    }
+
+    .legal-submenu {
+        padding-left: 0;
+        width: 253px;
+    }
+}

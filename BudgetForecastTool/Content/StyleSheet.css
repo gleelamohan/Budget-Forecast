@@ -1,0 +1,250 @@
+﻿/** Dark Orange **/
+/** Mid Orange **/
+/** Light Orange **/
+/** Light Gray */
+/*# sourceMappingURL=StyleSheet.css.map */
+/** Middle Gray*/
+/** Dark Gray **/
+/** Mid Gray **/
+/** Light Gray **/
+/** Blue **/
+/** Red **/
+/** Green **/
+/** White */
+.font-normal {
+  font-family: GothamBook, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+@media print {
+  .font-normal {
+    font-family: Arial, sans-serif;
+  }
+}
+.font-bold {
+  font-family: GothamBold, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+@media print {
+  .font-bold {
+    font-family: Arial, sans-serif;
+  }
+}
+.font-light {
+  font-family: GothamLight, Arial, sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 1;
+}
+@media print {
+  .font-light {
+    font-family: Arial, sans-serif;
+  }
+}
+html,
+body,
+body > form {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 94%;
+}
+/* --------------------------------------------------- Pages */
+.page-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+.sf_cols.container {
+  margin-top: 35px;
+}
+h1.page-title,
+.page-title h1 {
+  margin: 0;
+  padding: 0;
+}
+div.page-title {
+  clear: both;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.page-title:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.store-map-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  display: block;
+  overflow-x: hidden;
+}
+/* --------------------------------------------------- Legal Pages */
+a.print {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/iconsprite.png");
+  background-size: 50px auto;
+  background-repeat: no-repeat;
+  background-position: center -156px;
+  text-decoration: none;
+}
+a.print:hover {
+  text-decoration: none;
+}
+a.language-link {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 0 5px;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: underline;
+}
+a.language-link:hover {
+  text-decoration: underline;
+}
+table.device-compatibility {
+  padding: 0;
+  border: 1px solid #ee7c22;
+  border-left: none;
+}
+table.device-compatibility th {
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  background: #ee7c22;
+  border: none;
+}
+table.device-compatibility td {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  border-bottom: 1px solid #ee7c22;
+  border-left: 1px solid #ee7c22;
+}
+.page-wrapper {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  display: table;
+}
+/* Extra small devices (phones, up to 480px) */
+@media (max-width: 767px) {
+  .page-wrapper {
+    /*padding-bottom: 40px !important;*/
+  }
+  /* --------------------------------------------------- Mobile Devices Page */
+  .banner-left,
+  .banner-right {
+    display: block;
+    min-height: 230px;
+    width: 100% !important;
+  }
+  li.sfproductListItem {
+    clear: both;
+    display: block;
+    height: auto;
+  }
+  .sfproductPrice {
+    padding: 15px 0;
+  }
+  table.device-compatibility {
+    margin: 0 0auto 10px auto;
+    width: 98%;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .filter-wrapper.collapse {
+    height: auto !important;
+    display: block;
+  }
+  .colored {
+    background: rgba(125, 19, 36, 0.6);
+  }
+  /* --------------------------------------------------- Mobile Devices Page */
+  li.sfproductListItem:nth-child(2n+3) {
+    clear: both;
+  }
+  li.sfproductListItem:nth-child(2n+3):after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .sfproductPrice {
+    padding: 15px 0;
+  }
+  table.device-compatibility {
+    margin: 0 auto 10px auto;
+    width: 400px;
+  }
+  .device-banner {
+    background-image: url('../images/default-source/wind-asserts/true-freedom-is-unlimited.jpg');
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .filter-wrapper.collapse {
+    height: auto !important;
+    display: block;
+  }
+  .colored {
+    background: rgba(125, 19, 36, 0.4);
+  }
+  /* --------------------------------------------------- Mobile Devices Page */
+  li.sfproductListItem:nth-child(2n+3) {
+    clear: none;
+  }
+  li.sfproductListItem:nth-child(3n+4) {
+    clear: both;
+  }
+  .sfproductPrice {
+    padding: 15px 0;
+  }
+  table.device-compatibility {
+    margin: 0 0 10px 0;
+    width: 400px;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .filter-wrapper.collapse {
+    height: auto !important;
+    display: block;
+  }
+  /* --------------------------------------------------- Mobile Devices Page */
+  li.sfproductListItem:nth-child(2n+3) {
+    clear: none;
+  }
+  li.sfproductListItem:nth-child(3n+4) {
+    clear: both;
+  }
+  .sfproductPrice {
+    padding: 15px 0;
+  }
+  table.device-compatibility {
+    margin: 0 0 10px 0;
+    width: 400px;
+  }
+}
+/*# sourceMappingURL=StyleSheet.css.map */

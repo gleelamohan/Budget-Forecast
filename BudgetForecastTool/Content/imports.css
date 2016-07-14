@@ -1,0 +1,47 @@
+﻿/** Dark Orange **/
+/** Mid Orange **/
+/** Light Orange **/
+/** Light Gray */
+/*# sourceMappingURL=imports.css.map */
+/** Middle Gray*/
+/** Dark Gray **/
+/** Mid Gray **/
+/** Light Gray **/
+/** Blue **/
+/** Red **/
+/** Green **/
+/** White */
+.font-normal {
+  font-family: GothamBook, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+@media print {
+  .font-normal {
+    font-family: Arial, sans-serif;
+  }
+}
+.font-bold {
+  font-family: GothamBold, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+@media print {
+  .font-bold {
+    font-family: Arial, sans-serif;
+  }
+}
+.font-light {
+  font-family: GothamLight, Arial, sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  line-height: 1;
+}
+@media print {
+  .font-light {
+    font-family: Arial, sans-serif;
+  }
+}
+/*# sourceMappingURL=imports.css.map */
